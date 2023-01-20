@@ -13,8 +13,18 @@ function calculate(){
         case 0:
         case 6:
             tipo = "no laboral";
-        default:
+            break;
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
             tipo = "laboral";
+            break;
+        default:
+            tipo = "error";
+
+            
     }
     daysOfTheWeek=["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
     document.getElementById("result").value = `${daysOfTheWeek[theDayIs]}. El día es ${tipo}.`;
